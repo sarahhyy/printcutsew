@@ -1,22 +1,22 @@
 <script setup lang="ts">
 //import HelloWorld from "./components/HelloWorld.vue";
 //import TheWelcome from "./components/TheWelcome.vue";
-import Header from  "./components/Header.vue";
+import Header from "./components/Header.vue";
 import Blurb from "./components/Blurb.vue";
 undefined
 </script>
 
 <template>
-<div>
-  <Header />
-</div>
+  <div>
+    <Header />
+  </div>
 
-<div>
-  <Blurb />
-</div>
+  <div>
+    <Blurb />
+  </div>
   <main>
-    //add one component here.
-    //add same component but different content here (does it work that way?)
+    <div>//add one component here.</div>
+    <div>//add same component but different content here (does it work that way?)</div>
   </main>
 </template>
 
