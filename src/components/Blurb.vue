@@ -1,13 +1,17 @@
 <template>
   <div>
-    <p>{{blurbText[0]}}</p>
+    <p>{{blurbText[pageIndex]}}</p>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'Blurb'
-    data (
+    name: 'Blurb',
+    props: {
+      pageIndex: Number
+    },
+
+    data () {
       return {
         blurbText: [
           "Free downloadable t-shirt sewing patterns. \nEasy DIY tees. \nStart customizing your tee below!", 
@@ -15,7 +19,8 @@
           "Does your new design fit you to a T? ;D \nSelect a size, download your pdf pattern and get sewing!"
         ]
       }
-    )
+    }
+    
   }
 
 

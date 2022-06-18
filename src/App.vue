@@ -1,9 +1,25 @@
-<script setup lang="ts">
+<script>
 //import HelloWorld from "./components/HelloWorld.vue";
 //import TheWelcome from "./components/TheWelcome.vue";
 import Header from "./components/Header.vue";
 import Blurb from "./components/Blurb.vue";
-undefined
+
+export default {
+  components: {
+    Header,
+    Blurb
+  },
+  data () {
+    return {
+      pageNumber: 0
+    }
+  },
+  methods: {
+    goToDesignPage () {
+      this.pageNumber = 1
+    }
+  }
+}
 </script>
 
 <template>
@@ -12,10 +28,10 @@ undefined
   </div>
 
   <div>
-    <Blurb />
+    <Blurb :page-index="pageNumber"/>
   </div>
   <main>
-    <div>//add one component here.</div>
+    <div v-on:click="goToDesignPage">//add one component here.</div>
     <div>//add same component but different content here (does it work that way?)</div>
   </main>
 </template>
