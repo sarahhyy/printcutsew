@@ -32,8 +32,12 @@ export default {
   </div>
 
   <div class="row">
-    <div class="halfcol" v-on:click="goToDesignPage"><img class="squareImg" src="/src/assets/images/selectBoxy.jpg"></div>
-    <div class="halfcol" @click="goToDesignPage"><img class="squareImg" src="/src/assets/images/selectFitted.jpg"></div>
+    <div class="halfcol" v-on:click="goToDesignPage"><img class="squareImg" src="/src/assets/images/selectBoxysq.jpg">
+      <div id="boxy">boxy</div>
+    </div>
+    <div class="halfcol" @click="goToDesignPage"><img class="squareImg" src="/src/assets/images/selectFittedsq.jpg">
+      <div id="fitted">fitted</div>
+    </div>
   </div>
 </template>
 
@@ -44,6 +48,7 @@ export default {
 #app {
   margin: 0 auto;
   font-weight: normal;
+  max-width: 100%;
 }
 
 #header {
@@ -54,8 +59,26 @@ export default {
 }
 
 #blurb {
-  height: 60px; 
+  height: 30%; 
   padding: 2rem;
+}
+
+#boxy {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 60px;
+  color: white;
+}
+
+#fitted {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 60px;
+  color: white;
 }
 
 .row {
@@ -63,10 +86,12 @@ export default {
 }
 .halfcol {
   flex: 50%;
+  float: left;
 }
 
 .squareImg {
-  max-height: 70%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .logo {

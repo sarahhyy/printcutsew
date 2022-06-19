@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{blurbText[pageIndex]}}</p>
+    <pre>{{blurbText[pageIndex]}}</pre>
   </div>
 </template>
 
@@ -14,7 +14,7 @@
     data () {
       return {
         blurbText: [
-          "Free downloadable t-shirt sewing patterns. \nEasy DIY tees. \nStart customizing your tee below!", 
+          "Free downloadable t-shirt sewing patterns for easy DIY tees. \nStart customizing your tee below!", 
           "Switch up your design, toggle different parts to get your perfect tee. \nWhen you’re done, scroll down to stitch it together.",
           "Does your new design fit you to a T? ;D \nSelect a size, download your pdf pattern and get sewing!"
         ]
@@ -28,7 +28,7 @@
 </script>
 
 <style>
-p {
+pre {
   text-align: center;
   font-family: 'Alata', Verdana, Geneva, Tahoma, sans-serif;
   color: black;
