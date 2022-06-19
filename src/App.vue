@@ -23,17 +23,18 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div id="header">
     <Header />
   </div>
 
-  <div>
+  <div id="blurb">
     <Blurb :page-index="pageNumber"/>
   </div>
-  <main>
-    <div v-on:click="goToDesignPage">//add one component here.</div>
-    <div>//add same component but different content here (does it work that way?)</div>
-  </main>
+
+  <div class="row">
+    <div class="halfcol" v-on:click="goToDesignPage"><img class="squareImg" src="/src/assets/images/selectBoxy.jpg"></div>
+    <div class="halfcol" @click="goToDesignPage"><img class="squareImg" src="/src/assets/images/selectFitted.jpg"></div>
+  </div>
 </template>
 
 <style>
@@ -41,10 +42,31 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Inknut+Antiqua:wght@900&display=swap');
 
 #app {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   font-weight: normal;
+}
+
+#header {
+  max-width: 1280px;
+  width: auto;
+  height: 40px;
+  padding: 2rem;
+}
+
+#blurb {
+  height: 60px; 
+  padding: 2rem;
+}
+
+.row {
+  display: flex;
+}
+.halfcol {
+  flex: 50%;
+}
+
+.squareImg {
+  max-height: 70%;
 }
 
 .logo {
