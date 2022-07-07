@@ -33,22 +33,19 @@ export default {
     <Blurb :page-index="pageNumber"/>
   </div>
 
+  <div class="row designer">
+    <div class="arrow-col">
+        <img src="./assets/images/icons/arrowleft.png">
+    </div>
+    <div class="arrow-col">
+        <img src="./assets/images/icons/arrowright.png">
+    </div>
+  </div>
+
   <div>
     <BoxyFittedSelector 
       @change-page-index="goToDesignPage()"
     />
-  </div>
-
-  <div class="row neckline">
-    <div class="arrow-col">
-        
-    </div>
-    <div class="fourthcol">
-
-    </div>
-    <div class="arrow-col">
-
-    </div>
   </div>
 </template>
 
@@ -76,6 +73,19 @@ export default {
 
 .row {
   display: flex;
+}
+
+.designer {
+  margin: auto;
+  width: 1080px;
+  min-width: 1080px;
+  border: 5px black;
+  justify-content: space-between;
+}
+
+.arrow-col {
+  margin: 0;
+  width: 40px;
 }
 
 .neckline {
