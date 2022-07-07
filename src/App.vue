@@ -4,21 +4,27 @@
 import Header from "./components/Header.vue";
 import Blurb from "./components/Blurb.vue";
 import BoxyFittedSelector from "./components/BoxyFittedSelector.vue";
+import TeeDesigner from "./components/TeeDesigner.vue";
 
 export default {
   components: {
     Header,
     Blurb,
-    BoxyFittedSelector
+    BoxyFittedSelector,
+    TeeDesigner
   },
   data () {
     return {
-      pageNumber: 0
+      pageNumber: 0,
+      neckNumber: 0
     }
   },
   methods: {
     goToDesignPage () {
       this.pageNumber = 1
+    },
+    changeNeck () {
+      this.neckNumber += 1
     }
   }
 }
@@ -30,16 +36,11 @@ export default {
   </div>
 
   <div id="blurb">
-    <Blurb :page-index="pageNumber"/>
+    <Blurb :page-Index="pageNumber"/>
   </div>
 
-  <div class="row designer">
-    <div class="arrow-col">
-        <img src="./assets/images/icons/arrowleft.png">
-    </div>
-    <div class="arrow-col">
-        <img src="./assets/images/icons/arrowright.png">
-    </div>
+  <div>
+    <TeeDesigner :neck-Index="neckNumber"/>
   </div>
 
   <div>
