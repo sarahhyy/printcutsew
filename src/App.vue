@@ -3,11 +3,13 @@
 //import TheWelcome from "./components/TheWelcome.vue";
 import Header from "./components/Header.vue";
 import Blurb from "./components/Blurb.vue";
+import BoxyFittedSelector from "./components/BoxyFittedSelector.vue";
 
 export default {
   components: {
     Header,
-    Blurb
+    Blurb,
+    BoxyFittedSelector
   },
   data () {
     return {
@@ -31,12 +33,21 @@ export default {
     <Blurb :page-index="pageNumber"/>
   </div>
 
-  <div class="row">
-    <div class="halfcol" v-on:click="goToDesignPage"><img class="squareImg" src="/src/assets/images/selectBoxysq.jpg">
-      <div id="boxy">boxy</div>
+  <div>
+    <BoxyFittedSelector 
+      @change-page-index="goToDesignPage()"
+    />
+  </div>
+
+  <div class="row neckline">
+    <div class="arrow-col">
+        
     </div>
-    <div class="halfcol" @click="goToDesignPage"><img class="squareImg" src="/src/assets/images/selectFittedsq.jpg">
-      <div id="fitted">fitted</div>
+    <div class="fourthcol">
+
+    </div>
+    <div class="arrow-col">
+
     </div>
   </div>
 </template>
@@ -63,39 +74,24 @@ export default {
   padding: 2rem;
 }
 
-#boxy {
-  position: absolute;
-  top: 50%;
-  right: 15%;
-  font-family: 'Inknut Antiqua', serif;
-  font-size: 60px;
-  color: white;
-}
-
-#fitted {
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  font-family: 'Inknut Antiqua', serif;
-  font-size: 60px;
-  color: white;
-}
-
 .row {
   display: flex;
 }
+
+.neckline {
+  height: 110px;
+}
+
+.sleeve {
+  height: 350;
+}
+
+.body-length {
+  height: 300;
+}
+
 .halfcol {
   flex: 50%;
   float: left;
-}
-
-.squareImg {
-  width: 100%;
-  object-fit: contain;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
 }
 </style>
