@@ -5,13 +5,15 @@ import Header from "./components/Header.vue";
 import Blurb from "./components/Blurb.vue";
 import BoxyFittedSelector from "./components/BoxyFittedSelector.vue";
 import TeeDesigner from "./components/TeeDesigner.vue";
+import ContactPage from "./components/ContactPage.vue";
 
 export default {
   components: {
     Header,
     Blurb,
     BoxyFittedSelector,
-    TeeDesigner
+    TeeDesigner,
+    ContactPage
   },
   data () {
     return {
@@ -33,6 +35,10 @@ export default {
 
   <div id="blurb">
     <Blurb :page-Index="pageNumber"/>
+  </div>
+
+  <div>
+    <ContactPage />
   </div>
 
   <div>
