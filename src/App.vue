@@ -15,16 +15,12 @@ export default {
   },
   data () {
     return {
-      pageNumber: 0,
-      neckNumber: 0
+      pageNumber: 0
     }
   },
   methods: {
     goToDesignPage () {
       this.pageNumber = 1
-    },
-    changeNeck () {
-      this.neckNumber += 1
     }
   }
 }
@@ -40,7 +36,7 @@ export default {
   </div>
 
   <div>
-    <TeeDesigner :neck-Index="neckNumber"/>
+    <TeeDesigner />
   </div>
 
   <div>

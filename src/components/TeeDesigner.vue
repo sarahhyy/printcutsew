@@ -1,12 +1,13 @@
 <template>
   <div class="row designer">
-    <div class="arrow-col">
+    <div class="arrow-col" @click="changeNeckMinus()">
         <img src="/src/assets/images/icons/arrowleft.png">
     </div>
     <div>
-      <img src={{neckAssets}}>
+      <!--<img class="base-design" src="/src/assets/designChoiceAssets/Loose Body Base.png">-->
+      <img class="layer-design" :src="neckAssets[neckNumber]" />
     </div>
-    <div class="arrow-col" @click="changeNeck()">
+    <div class="arrow-col" @click="changeNeckPlus()">
         <img src="/src/assets/images/icons/arrowright.png">
     </div>
   </div>
@@ -17,18 +18,32 @@
   export default {
     name: 'TeeDesigner',
     props: {
-      neckAssets: Number
+      neckNumber: Number
     },
 
     data () {
       return {
+        neckNumber: 0,
         neckAssets: [
           "/src/assets/designChoiceAssets/Neck - Crew.png", 
           "/src/assets/designChoiceAssets/Neck - V.png"
         ]
       }
+    },
+
+    methods: {
+      changeNeckPlus () {
+      this.neckNumber = (this.neckNumber + 1) % this.neckAssets.length;
+    },
+      changeNeckMinus () {
+        if (this.neckNumber == 0) {
+          this.neckNumber = this.neckAssets.length -1;
+        } else {
+          this.neckNumber -= 1;
+        }
     }
     
+    }
   }
 
 
@@ -59,6 +74,14 @@ div {
 .arrow-col {
   margin: 0;
   width: 40px;
+}
+
+.base-design {
+  z-index: 0;
+}
+
+.layer-design {
+  z-index: 10;
 }
 
 .neckline {
