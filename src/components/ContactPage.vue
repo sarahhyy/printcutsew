@@ -3,45 +3,55 @@
     <div class="halfcol">
       <img class="squareImg" src="/src/assets/images/sewingMachine.jpg" />
     </div>
-    <div class="halfcol">
-      <div class="contactForm">
-        <h1>Say Hello!</h1>
-        <p>Write to us!</p>
-        <p>Let us know of anything we can improve on or if we're doing things right.</p>
-      </div>
+    <div class="halfcol contactForm">
+      <h2>Say Hello!</h2>
+      <p>Write to us!</p>
+      <p>
+        Let us know of anything we can improve on or if we're doing things
+        right.
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'ContactPage',
-  }
+export default {
+  name: "ContactPage",
+};
 </script>
 
 <style>
 p {
-  text-align: left;
-  font-family: 'Alata', Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left top;
+  font-family: "Alata", Verdana, Geneva, Tahoma, sans-serif;
   color: black;
-  font-size: small;
+  font-size: medium;
+}
+
+h2 {
+  text-align: left top;
+  font-family: "Alata", Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  font-size: 4.5em;
 }
 
 div {
-  margin:auto;
+  margin: auto;
   width: auto;
 }
 
-contactForm {
+.contactForm {
+  margin-top: 0;
   width: 200px;
   align-self: center;
+  padding: 5%;
 }
 
 #boxy {
   position: absolute;
   top: 50%;
   right: 15%;
-  font-family: 'Inknut Antiqua', serif;
+  font-family: "Inknut Antiqua", serif;
   font-size: 60px;
   color: white;
 }
@@ -50,7 +60,7 @@ contactForm {
   position: absolute;
   top: 50%;
   left: 15%;
-  font-family: 'Inknut Antiqua', serif;
+  font-family: "Inknut Antiqua", serif;
   font-size: 60px;
   color: white;
 }

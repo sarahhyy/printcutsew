@@ -13,19 +13,19 @@ export default {
     Blurb,
     BoxyFittedSelector,
     TeeDesigner,
-    ContactPage
+    ContactPage,
   },
-  data () {
+  data() {
     return {
-      pageNumber: 0
-    }
+      pageNumber: 0,
+    };
   },
   methods: {
-    goToDesignPage () {
-      this.pageNumber = 1
-    }
-  }
-}
+    goToDesignPage() {
+      this.pageNumber = 1;
+    },
+  },
+};
 </script>
 
 <template>
@@ -34,11 +34,7 @@ export default {
   </div>
 
   <div id="blurb">
-    <Blurb :page-Index="pageNumber"/>
-  </div>
-
-  <div>
-    <ContactPage />
+    <Blurb :page-Index="pageNumber" />
   </div>
 
   <div>
@@ -46,9 +42,11 @@ export default {
   </div>
 
   <div>
-    <BoxyFittedSelector 
-      @change-page-index="goToDesignPage()"
-    />
+    <BoxyFittedSelector @change-page-index="goToDesignPage()" />
+  </div>
+
+  <div>
+    <ContactPage />
   </div>
 </template>
 
@@ -70,7 +68,7 @@ export default {
 }
 
 #blurb {
-  height: 30%; 
+  height: 30%;
   padding: 2rem;
 }
 
