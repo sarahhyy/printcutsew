@@ -4,13 +4,13 @@
   </div>
 
   <div class="row designer body">
-    <div class="arrow-col" @click="changeBodyMinus()">
+    <div class="body-arrow-col" @click="changeBodyMinus()">
       <img src="/src/assets/images/icons/arrowleft.png" />
     </div>
-    <div>
+    <div class="body-image">
       <img class="layer-design" :src="looseBodyAssets[looseBodyNum]" />
     </div>
-    <div class="arrow-col" @click="changeBodyPlus">
+    <div class="body-arrow-col" @click="changeBodyPlus">
       <img src="/src/assets/images/icons/arrowright.png" />
     </div>
   </div>
@@ -28,13 +28,13 @@
   </div>
 
   <div class="row designer">
-    <div class="arrow-col" @click="changeSleeveMinus()">
+    <div class="sleeve-arrow-col" @click="changeSleeveMinus()">
       <img src="/src/assets/images/icons/arrowleft.png" />
     </div>
     <div>
       <img class="layer-design sleeve" :src="looseSleeveAssets[looseSleeveNum]" />
     </div>
-    <div class="arrow-col" @click="changeSleevePlus">
+    <div class="sleeve-arrow-col" @click="changeSleevePlus">
       <img src="/src/assets/images/icons/arrowright.png" />
     </div>
   </div>
@@ -129,6 +129,7 @@ div {
 
 .layer-design {
   z-index: 10;
+  align-self: top;
 }
 
 .neckline {
@@ -140,10 +141,27 @@ div {
   margin-top: -26px;
 }
 
+.sleeve-arrow-col {
+  margin-top: 40px;
+  margin-left: 0;
+  margin-right: 0;
+  width: 40px;
+}
+
+.body-arrow-col {
+  margin-top: 40px;
+  margin-left: 0;
+  margin-right: 0;
+  width: 40px;
+}
+
 .body {
   position: absolute;
   top: 160px;
-  height: 300;
-  left: 21.6%;
+  left: 21.85%;
+}
+
+.body-image {
+  margin: 0;
 }
 </style>

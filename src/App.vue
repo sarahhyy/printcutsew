@@ -37,22 +37,22 @@ export default {
     <Blurb :page-Index="pageNumber" />
   </div>
 
-  <div>
-    <TeeDesigner />
-  </div>
-
-  <div>
+  <div v-if="pageNumber == 0">
     <BoxyFittedSelector @change-page-index="goToDesignPage()" />
   </div>
 
-  <div>
+  <div v-if="pageNumber == 1">
+    <TeeDesigner />
+  </div>
+
+  <div v-if="pageNumber == 5">
     <ContactPage />
   </div>
 </template>
 
 <style>
 @import "./assets/base.css";
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Inknut+Antiqua:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Inknut+Antiqua:wght@900&display=swap");
 
 #app {
   margin: 0 auto;
@@ -74,31 +74,6 @@ export default {
 
 .row {
   display: flex;
-}
-
-.designer {
-  margin: auto;
-  width: 1080px;
-  min-width: 1080px;
-  border: 5px black;
-  justify-content: space-between;
-}
-
-.arrow-col {
-  margin: 0;
-  width: 40px;
-}
-
-.neckline {
-  height: 110px;
-}
-
-.sleeve {
-  height: 350;
-}
-
-.body-length {
-  height: 300;
 }
 
 .halfcol {
